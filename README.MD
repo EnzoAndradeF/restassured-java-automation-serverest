@@ -3,6 +3,7 @@
 Projeto de automação de testes de API da aplicação ServeRest, desenvolvido com foco em boas práticas de QA, organização de código e execução automatizada via CI.
 
 Os testes são executados automaticamente via **GitHub Actions** a cada push ou pull request.
+![CI](https://github.com/EnzoAndradeF/restassured-java-automation-serverest/actions/workflows/ci.yml/badge.svg)
 
 ---
 
