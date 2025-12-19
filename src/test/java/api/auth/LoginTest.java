@@ -29,7 +29,8 @@ public class LoginTest {
                         """)
             .when()
                 .post("/login");
-        
+
+        System.out.println(response.getBody().asString());
         assertEquals(200, response.getStatusCode());
 
         String token = response.jsonPath().getString("authorization");

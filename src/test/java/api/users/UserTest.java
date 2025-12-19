@@ -37,6 +37,7 @@ public class UserTest {
             .when()
                 .post("/usuarios");
 
+        System.out.println(response.getBody().asString());
         assertEquals(201, response.getStatusCode());
 
         String message = response.jsonPath().getString("message");
@@ -58,6 +59,7 @@ public class UserTest {
             .when()
                 .post("/login");
 
+        System.out.println(loginResponse.getBody().asString());
         assertEquals(200, loginResponse.getStatusCode());
 
         String token = loginResponse.jsonPath().getString("authorization");
@@ -70,6 +72,7 @@ public class UserTest {
                 .when()
                     .get("/usuarios");
 
+        System.out.println(userResponse.getBody().asString());
         assertEquals(200, userResponse.getStatusCode());
 
     }
@@ -81,6 +84,7 @@ public class UserTest {
             .when()
                 .get("/usuarios");
 
+        System.out.println(response.getBody().asString());
         assertEquals(200, response.getStatusCode());
         assertTrue(response.jsonPath().getList("usuarios").size() > 0);
     }

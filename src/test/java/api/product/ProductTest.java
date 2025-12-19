@@ -24,6 +24,7 @@ public class ProductTest {
         .when()
             .post("/login");
 
+    System.out.println(response.getBody().asString());
     assertEquals(200, response.getStatusCode());
 
     String token = response.jsonPath().getString("authorization");
@@ -56,7 +57,8 @@ public class ProductTest {
                         """)
             .when()
                 .post("/produtos");
-
+        
+        System.out.println(response.getBody().asString());        
         assertEquals(401, response.getStatusCode());
     }
 
@@ -82,6 +84,7 @@ public class ProductTest {
                 .when()
                     .post("/produtos");
 
+        System.out.println(produtoResponse.getBody().asString());
         assertEquals(201, produtoResponse.getStatusCode());
     }
 
@@ -106,6 +109,8 @@ public class ProductTest {
                         """, nomeProduto))
                     .when()
                         .post("/produtos");
+        
+        System.out.println(createResponse.getBody().asString());
         assertEquals(201, createResponse.getStatusCode());
 
         String productId = createResponse.jsonPath().getString("_id");
@@ -126,7 +131,8 @@ public class ProductTest {
                             """, nomeProduto))
                         .when()
                             .put("/produtos/" + productId);
-        
+
+        System.out.println(uptadeResponse.getBody().asString());
         assertEquals(200, uptadeResponse.getStatusCode());
     }
 
@@ -151,6 +157,8 @@ public class ProductTest {
                                 """, nomeProduto))
                     .when()
                         .post("/produtos");
+
+        System.out.println(createResponse.getBody().asString());
         assertEquals(201, createResponse.getStatusCode());
 
         String productId = createResponse.jsonPath().getString("_id");
@@ -163,6 +171,7 @@ public class ProductTest {
                         .when()
                             .delete("/produtos/" + productId);
 
+        System.out.println(deleteResponse.getBody().asString());
         assertEquals(200, deleteResponse.getStatusCode());       
     }
 }
