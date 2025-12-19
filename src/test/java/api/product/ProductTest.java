@@ -63,24 +63,25 @@ public class ProductTest {
     }
 
     @Test
-    void quandoCrioProdutoComToken_entaoStatus201() {
+    void quandoCrioProdutoComTokenentaoStatus201() {
         // Login
         String token = loginComoAdmin();
 
         // CRIAR PRODUTO
+        String nomeProduto = gerarNomeProdutoUnico();
         Response produtoResponse =
             RestAssured
                 .given()
                     .contentType("application/json")
                     .header("Authorization", token)
-                    .body("""
+                    .body(String.format("""
                         {
                         "nome": "%s",
                         "preco": 100,
                         "descricao": "Produto com token",
                         "quantidade": 10
                         }
-                        """)
+                        """, nomeProduto))
                 .when()
                     .post("/produtos");
 
