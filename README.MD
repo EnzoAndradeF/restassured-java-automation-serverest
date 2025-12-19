@@ -75,13 +75,13 @@ src
 
 ---
 
-# Clonar o repositório
+### Clonar o repositório
 git clone <URL_DO_REPOSITORIO>
 
-# Acessar a pasta do projeto
+### Acessar a pasta do projeto
 cd nome-do-projeto
 
-# Executar os testes
+### Executar os testes
 mvn clean test
 
 ---
