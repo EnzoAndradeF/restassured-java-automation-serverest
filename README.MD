@@ -75,7 +75,6 @@ src
 
 ---
 
-```bash
 # Clonar o repositório
 git clone <URL_DO_REPOSITORIO>
 
@@ -94,7 +93,7 @@ mvn clean test
 
 O workflow:
 
-* Faz checkout do código
+* Faz checkout dao código
 * Configura o ambiente Java
 * Executa os testes via Maven
 
