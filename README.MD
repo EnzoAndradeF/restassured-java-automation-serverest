@@ -1,4 +1,4 @@
-# 🧪 Automação de Testes de API com Rest Assured
+#  Automação de Testes de API com Rest Assured
 
 Projeto de automação de testes de API da aplicação ServeRest, desenvolvido com foco em boas práticas de QA, organização de código e execução automatizada via CI.
 
@@ -6,7 +6,7 @@ Os testes são executados automaticamente via **GitHub Actions** a cada push ou 
 
 ---
 
-## 🔧 Tecnologias Utilizadas
+##  Tecnologias Utilizadas
 
 - Java 17  
 - Maven  
@@ -18,7 +18,7 @@ Os testes são executados automaticamente via **GitHub Actions** a cada push ou 
 
 ---
 
-## 🧪 Testes Manuais com Postman
+##  Testes Manuais com Postman
 
 * Criação de collection
 * Uso de environments e variáveis
@@ -28,37 +28,38 @@ Os testes são executados automaticamente via **GitHub Actions** a cada push ou 
 
 ---
 
-## 🌐 API Testada
+##  API Testada
 
 - **ServeRest**
 - Documentação: https://serverest.dev
 
 ---
 
-## 📂 Estrutura do Projeto
+##  Estrutura do Projeto
 
+```
 src
 └── test
     └── java
-        └── api
-            ├── auth        # Testes de autenticação (login)
-            ├── users       # Testes de usuários
+        └── api        
+            └── auth        # Testes de autenticação (login)              
+            ├── users       # Testes d eusuários
             └── product     # Testes de produtos
 
----
+```
 
-## ✅ Cenários Testados
+##  Cenários Testados
 
-### 🔐 Autenticação
+###  Autenticação
 - Login com credenciais válidas
 - Validação do token retornado
 
-### 👤 Usuários
+###  Usuários
 - Criação de usuário com dados válidos
 - Listagem de usuários
 - Listagem autenticada com token
 
-### 📦 Produtos
+###  Produtos
 - Criação de produto sem token (401)
 - Criação de produto com token (201)
 - Atualização de produto
@@ -66,39 +67,42 @@ src
 
 ---
 
-## ▶️ Como Executar os Testes Localmente
+##  Como Executar os Testes Localmente
 
 ### Pré-requisitos:
 - Java 17+
 - Maven
 
-### Executar:
-```bash
-mvn test
+---
+
+### Clonar o repositório
+git clone <URL_DO_REPOSITORIO>
+
+### Acessar a pasta do projeto
+cd nome-do-projeto
+
+### Executar os testes
+mvn clean test
 
 ---
 
-## 🔄 Integração Contínua (CI)
-
-O projeto conta com **GitHub Actions** para execução automática dos testes a cada:
+##  Integração Contínua (CI)
 
 * Push
 * Pull Request
 
 O workflow:
 
-* Faz checkout do código
+* Faz checkout dao código
 * Configura o ambiente Java
 * Executa os testes via Maven
 
+
 ---
 
-## 📌 Observações
+##  Observações
 
-Os testes utilizam dados dinâmicos (ex.: email e nome de produto) para evitar conflitos em execuções repetidas
-
-O foco do projeto é qualidade de código, clareza e estabilidade em CI, não volume excessivo de testes
-
-Projeto desenvolvido com objetivo de aprendizado prático
+* Os testes utilizam dados dinâmicos (ex: email e nome de produto) para evitar conflitos em execuções repetidas
+* O foco do projeto é qualidade de código, clareza e estabilidade em CI, não volume excessivo de testes
 
 ---
